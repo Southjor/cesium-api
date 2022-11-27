@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三维地图</title>
+    <style>
+    </style>
+</head>
+<body>
+<div class="fullSize" id="cesiumContainer">
+
+</div>
+</body>
+<script type="text/javascript" src="./staticForMap/js/config.js"></script>
+</html>
+<script type="text/javascript">
+
+    let map3d, viewer, Cesium;
+
+    let initMap = function () {
+
+        map3d = new South.GLMap('cesiumContainer');
+
+        viewer = map3d.viewer;
+        Cesium = map3d.Cesium;
+
+        map3d.flyToRectangle();
+    }
+    initMap();
+</script>
